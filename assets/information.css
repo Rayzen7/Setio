@@ -1,0 +1,408 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    font-family: "Poppins", sans-serif;
+}
+
+/* logo animate */
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    transition: .75s;
+    scroll-snap-type: y proximity;
+    overflow: hidden;
+}
+
+#video{
+    scroll-snap-align: center;
+    transition: .5s;
+    transform: scale(200%);
+}
+
+.loader-hidden{
+    transition: 1.5s;
+    overflow: hidden;
+    opacity: 1;
+    height: 0;
+    visibility: hidden;
+    position: fixed;
+}
+/* logo animate end */
+
+/* navbar */
+.navbar {
+    display: flex;
+    background-color: #00000027;
+    width: 100%;
+    height: 13vh;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    transition: background-color 0.5s ease, opacity 0.6s ease;
+}
+
+nav .navbar .logo h2 {
+    color: #ffff;
+    margin-left: 40px;
+    font-size: 30px;
+}
+
+nav .navbar .logo h2 span {
+    color: #9000e4;
+}
+
+nav .navbar ul {
+    display: flex;
+    margin-right: 20px;
+}
+
+nav .navbar ul li {
+    list-style: none;
+    text-decoration: none;
+    transform: scale(100%);
+}
+
+nav .navbar ul li a {
+    text-decoration: none;
+    color: #ffff;
+    text-shadow: 2px 0px 5px #ffffff;
+    font-weight: 600;
+    margin: 0 20px 0 10px;
+    font-size: 17px;
+}
+
+nav .navbar ul li:hover {
+    transform: scale(90%);
+    transition: all ease-in-out 0.3s;
+}
+
+nav .navbar ul li a:hover {
+    color:  #9000e4;
+    text-shadow: 2px 0px 8px #9000e4;
+}
+
+nav .navbar .list {
+    color: #ffffff;
+    font-size: 30px;
+    display: none;
+}
+
+/* navbar animation color */
+.navbar-color {
+    background-color: #9000e43a;
+    transition: ease-in-out 0.2s;
+}
+/* Navbar end */
+
+/* Information */
+.project {
+    color: #ffffff;
+    align-items: center;
+    text-align: center;
+    transform: translateY(20%);
+}
+
+.project h1 {
+    font-size: 35px;
+    text-shadow: 2px 0px 15px #ffffff80;
+    margin-bottom: 10px;
+}
+
+.project .project-content {
+    display: flex;
+    gap: 65px;
+    margin-top: 20px;
+    padding-top: 20px;
+    overflow-x: auto;
+    margin-right: 40px;
+    margin-left: 40px;
+}
+
+.project .project-content::-webkit-scrollbar {
+    width: 0;
+}
+
+.project .project-content .projects .project-layer {
+    transform: scale(100%);
+    animation: bounce infinite ease-in-out 9s;
+    scale: 1.0;
+}
+
+.project .project-content .projects .project-layer a img {
+    width: 600px;
+    height: 330px;
+    border-radius: 10px;
+}
+
+.project .project-content .projects .project-layer h2 {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    text-shadow: 2px 0px 15px #ffffff80;
+}
+
+.project .project-content .projects .project-layer:hover {
+    scale: 0.9;
+    transition: all ease-in-out 0.4s;
+    opacity: 80%;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(-5%);
+    }
+    25%{
+        transform: translateY(5%);
+    }
+    50%{
+        transform: translateY(-5%);
+    }
+    75%{
+        transform: translateY(5%);
+    }
+    100%{
+        transform: translateY(-5%);
+    }
+}
+/* Project end */
+
+/* real time */
+.real-time {
+    color: #ffffff;
+    margin-top: 135px;
+}
+
+.real-time h1 {
+    text-align: center;
+    text-shadow: 2px 0px 15px #ffffff80;
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.real-time .real-time-container {
+    font-weight: 600;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 50px;
+    color: #ffffff;
+    background-color: #000000;
+    width: 400px;
+    border-radius: 10px;
+    height: 80px;
+    align-items: center;
+    margin: auto;
+    padding-top: 5px;
+}
+/* real time end */
+
+/* Channel Youtube */
+.youtube {
+    color: #ffffff;
+    margin-top: 90px;
+}
+
+.youtube h1 {
+    font-size: 40px;
+    text-align:center;
+    text-shadow: 2px 0px 15px #ffffff80;
+}
+
+.youtube .youtube-videos {
+    width: 450px;
+    height: 205px;
+    align-items: center;
+    margin: auto;
+    gap: 45px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.youtube .youtube-videos iframe {
+    box-shadow: 0px 3px 27px 0px rgba(144, 0, 227, 0.329);
+    animation: bounce infinite 10s;
+}
+/* Yotube end */
+
+/* Footer */
+svg {
+ margin-top: 1200px;
+}
+
+.footer {
+    margin-top: -20px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #9000e4;
+    height: 10vh;
+    text-align: center;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.footer h2 {
+    margin-top: -95px;
+    font-size: 30px;
+}
+
+.footer .footer-icon i {
+    font-size: 30px;
+    margin: 5px 5px 5px 5px;
+    font-weight: 600;
+    transform: scale(100%);
+}
+
+.footer .footer-icon i:hover {
+    transform: scale(90%);
+    transition: all 0.3s ease-in-out;
+    opacity: 80%;
+}
+
+.footer p {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+/* footer end */
+
+/* Handphone responsive */
+@media (min-width: 320px) and (max-width: 767px) {
+    /* logo animate */
+    #video {
+        transform: scale(100%);
+    }
+    /* logo animate end */
+
+    /* navbar */
+    nav .navbar {
+        height: 10vh;
+    }
+
+    nav .navbar .logo h2 {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    nav .navbar .list {
+        display: block;
+        margin-right: 20px;
+    }
+
+    nav .navbar ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: -100%;
+        top: 0;
+        background-color: #9000e43a;
+        height: 100vh;
+        width: 240px;
+        margin: 0;
+        margin-top: 76.5px;
+        transition: all ease-in-out 0.5s;
+    }
+
+    nav .navbar ul li {
+        padding: 40px 0 0 40px;
+    }
+
+    .navbar.active ul {
+        right: 0;
+    }
+    /* navbar end */
+
+    /* Projects */
+    .project {
+        transform: translateY(26%);
+    }
+
+    .project h1 {
+        font-size: 24px;
+    }
+
+    .project .project-content .projects .project-layer a img {
+        width: 310px;
+        height: 175px;
+    }
+
+    .project .project-content .projects .project-layer h2 {
+        font-size: 16px;
+    }
+    /* projects end */
+
+    /* real time */
+    .real-time h1 {
+        font-size: 24px;
+    }
+
+    .real-time .real-time-container {
+        font-size: 33px;
+        width: 250px;
+    }
+    /* real time end */
+
+    /* youtube */
+    .youtube {
+        margin-top: 70px;
+    }
+
+    .youtube h1 {
+        font-size: 24px;
+    }
+
+    .youtube .youtube-videos {
+        display: block;
+        gap: none;
+        width: 100%;
+    }
+
+    .youtube .youtube-videos iframe {
+        width: 270px;
+        height: 180px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+    /* youtube end */
+
+    /* footer */
+    svg {
+        margin-top: 800px;
+    }
+    
+    .footer h2{
+        margin-top: -25px;
+        font-size: 17px;
+    }
+
+    .footer .footer-icon i {
+        font-size: 14px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+    /* footer end */
+
+}

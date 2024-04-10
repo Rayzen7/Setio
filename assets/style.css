@@ -1,0 +1,641 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    object-fit: cover;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #000;
+    font-family: "Poppins", sans-serif;
+}
+
+/* logo animate */
+.loader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000;
+    transition: .75s;
+    scroll-snap-type: y proximity;
+    overflow: hidden;
+}
+
+#video{
+    scroll-snap-align: center;
+    transition: .5s;
+    transform: scale(200%);
+}
+
+.loader-hidden{
+    transition: 1.5s;
+    overflow: hidden;
+    opacity: 1;
+    height: 0;
+    visibility: hidden;
+    position: fixed;
+}
+/* logo animate end */
+
+/* navbar */
+.navbar {
+    display: flex;
+    background-color: #00000027;
+    width: 100%;
+    height: 13vh;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 99;
+    transition: background-color 0.5s ease, opacity 0.6s ease;
+}
+
+nav .navbar .logo h2 {
+    color: #ffff;
+    margin-left: 40px;
+    font-size: 30px;
+}
+
+nav .navbar .logo h2 span {
+    color: #9000e4;
+}
+
+nav .navbar ul {
+    display: flex;
+    margin-right: 20px;
+}
+
+nav .navbar ul li {
+    list-style: none;
+    text-decoration: none;
+    transform: scale(100%);
+}
+
+nav .navbar ul li a {
+    text-decoration: none;
+    color: #ffff;
+    text-shadow: 2px 0px 5px #ffffff;
+    font-weight: 600;
+    margin: 0 20px 0 10px;
+    font-size: 17px;
+}
+
+nav .navbar ul li:hover {
+    transform: scale(90%);
+    transition: all ease-in-out 0.3s;
+}
+
+nav .navbar ul li a:hover {
+    color:  #9000e4;
+    text-shadow: 2px 0px 8px #9000e4;
+}
+
+nav .navbar .list {
+    font-size: 30px;
+    display: none;
+    color: #ffffff;
+}
+
+/* navbar animation color */
+.navbar-color {
+    background-color: #9000e43a;
+    transition: ease-in-out 0.2s;
+}
+/* Navbar end */
+
+/* Introduce */
+.introduce {
+    color: #ffff;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.introduce .introduce-head {
+    padding-left: 120px;
+    margin-top: -20px;
+}
+
+.introduce .introduce-head h1 {
+    font-size: 60px;
+    width: 600px;
+}
+
+.introduce .introduce-head .h1-animate {
+    height: 14vh;
+    margin-top: 20px;
+    background-color: #ffff;
+    position: absolute;
+    animation: text 3s ease-out;
+    animation-delay: 5s;
+}
+
+.introduce .introduce-head h1 span {
+    color: #9000e4;
+}
+
+.introduce .introduce-head .span-animate {
+    height: 13vh;
+    background-color: #9000e4;
+    position: absolute;
+    margin-top: 100px;
+    animation: text 3s ease-in;
+    animation-delay: 5s;
+}
+
+@keyframes text {
+    0% {
+        width: 40%;
+    }
+    100% {
+        width: 0%;
+    }
+}
+
+.introduce .introduce-head p {
+    font-weight: 500;
+    padding-top: 10px;
+    font-size: 20px;
+    width: 600px;
+}
+
+.introduce .introduce-head button {
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    background-color: #9000e4;
+    margin-top: 20px;
+    width: 150px;
+    height: 40px;
+    border: none;
+    transform: scale(100%);
+}
+
+.introduce .introduce-head button a {
+    color: #ffffff;
+    font-weight: 600;
+    list-style: none;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.introduce .introduce-head button:hover {
+    transform: scale(90%);
+    transition: all ease-in-out 0.2s;
+    opacity: 0.9;
+}
+
+.introduce .introduce-mockup img {
+    width: 500px;
+    height: 620px;
+    float: right;
+    animation: bounce 12s infinite;
+    margin-top: 90px;
+    margin-left: 50px;
+}
+
+@keyframes bounce {
+    0%{
+        transform: translateY(-5%);
+    }
+    25%{
+        transform: translateY(5%);
+    }
+    50%{
+        transform: translateY(-5%);
+    }
+    75%{
+        transform: translateY(5%);
+    }
+    100%{
+        transform: translateY(-5%);
+    }
+}
+/* Introduce end */
+
+/* About me */
+.about {
+    color: #ffff;
+    margin-top: 60px;
+}
+
+.about .about-head h1 {
+    text-align: center;
+    font-size: 40px;
+    color: #9000e4;
+}
+
+.about .about-head h1 span {
+    color: #ffff;
+}
+
+/* cards */
+.about .about-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -20px 100px 0 100px;
+}
+
+.about .about-cards .about-card {
+    background-color: #000;
+    color: #ffffff;
+    height: 30vh;
+    width: 450px;
+    margin: auto;
+    margin-top: 70px;
+    margin-bottom: 40px;
+    height: 300px;
+    border-radius: 15px;
+    text-align: center;
+    -webkit-box-shadow: 0px 3px 17px 0px rgba(144,0,227,0.64);
+    -moz-box-shadow: 0px 3px 17px 0px rgba(144,0,227,0.64);
+    box-shadow: 0px 3px 27px 0px rgba(144, 0, 227, 0.479);
+}
+
+.about .about-cards .about-card i {
+    font-size: 50px;
+    background-color: #9000e4;
+    width: 80px;
+    padding-top: 15px;
+    color: #ffff;
+    border-radius: 100px;
+    height: 80px;
+    margin: 20px 0 0 0;
+    box-shadow: 0px 3px 17px 0px rgba(144,0,227,0.64);
+}
+
+.about .about-cards .about-card h1 {
+    margin-top: 20px;
+    color: #9000e4;
+    text-shadow: 0 0 10px #9000e4;
+}
+
+.about .about-cards .about-card p {
+    margin: 10px 25px 0 25px;
+    font-weight: 600;
+    font-size: 14px;
+    text-align: justify;
+    text-shadow: 0 0 30px #ffffff75;
+}
+
+/* card hover */
+.about .about-cards .about-card:hover {
+    background-color: #9000e4;
+    transition: all ease-in-out 0.5s;
+    box-shadow: 0px 3px 27px 0px rgba(255, 255, 255, 0.479);
+}
+
+.about .about-cards .about-card:hover i {
+    margin-top: -40px;
+    transition: all ease-in-out 0.5s;
+    background-color: #ffff;
+    color: #9000e4;
+}
+
+.about .about-cards .about-card:hover h1 {
+    transition: all ease-in-out 0.5s;
+    color: #ffffff;
+}
+
+.about .about-cards .about-card:hover p {
+    transition: all ease-in-out 0.5s;
+    color: #ffffff;
+}
+/* About me end */
+
+/* School */
+.school {
+    color: #ffff;
+    margin-top: 40px;
+}
+
+.school h1 {
+    font-size: 35px;
+    text-align: center;
+}
+
+.school h1 span {
+    color: #9000e4;
+}
+
+.school .my-school {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 30px 130px 0 130px;
+    align-items: center;
+}
+
+.school .my-school img {
+    width: 350px;
+    height: 350px;
+    border-radius: 10px;
+    margin: auto;
+    box-shadow: 0px 3px 17px 0px rgba(144,0,227,0.64);
+    animation: bounce 10s infinite;
+}
+
+/* according */
+.school .my-school .school-according {
+    color: #ffff;
+    align-items: center;
+}
+
+.school .my-school .school-according .content {
+    background-color: #000; 
+    border: 3px solid #9000e4;
+    box-shadow: 0px 3px 17px 0px rgba(144,0,227,0.64);
+    width: 600px;
+    border-radius: 5px;
+    margin: auto;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+.school .my-school .school-according .content:hover {
+    background-color: #ffff;
+    color: #9000e4;
+    box-shadow: 0px 3px 17px 0px rgba(255, 255, 255, 0.64);
+}
+
+.school .my-school .school-according  .content .according-header h2 {
+    font-size: 20px;
+    padding: 10px 0 10px 15px;
+    line-height: 3rem;
+    min-height: 1rem;
+}
+
+.school .my-school .school-according .content .according-header::after {
+    content: "\002b";
+    margin-left: 520px;
+    font-weight: 600;
+    font-size: 30px;
+    position: absolute;
+    margin-top: -55px;
+}
+
+.school .my-school .school-according  .content .according-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.school .my-school .school-according  .content .according-body .body-content p {
+    padding-left: 10px;
+    padding-top: 15px;
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+.school .my-school .school-according .content .according-header.active::after {
+    content: "\2212";
+}
+/* School end */
+
+/* Footer */
+.footer {
+    margin-top: -20px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #9000e4;
+    height: 10vh;
+    text-align: center;
+    padding-top: 15px;
+    cursor: pointer;
+}
+
+.footer h2 {
+    margin-top: -95px;
+    font-size: 30px;
+}
+
+.footer .footer-icon i {
+    font-size: 30px;
+    margin: 5px 5px 5px 5px;
+    font-weight: 600;
+    transform: scale(100%);
+}
+
+.footer .footer-icon i:hover {
+    transform: scale(90%);
+    transition: all 0.3s ease-in-out;
+    opacity: 80%;
+}
+
+.footer p {
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 5px;
+}
+/* footer end */
+
+/* Handphone responsive */
+@media (min-width: 320px) and (max-width: 767px) {
+    /* logo animate */
+    #video {
+        transform: scale(100%);
+    }
+    /* logo animate end */
+
+    /* navbar */
+    nav .navbar {
+        height: 10vh;
+    }
+
+    nav .navbar .logo h2 {
+        font-size: 20px;
+        margin-left: 20px;
+    }
+
+    nav .navbar .list {
+        display: block;
+        margin-right: 20px;
+    }
+
+    nav .navbar ul {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        right: -100%;
+        top: 0;
+        background-color: #9000e43a;
+        height: 100vh;
+        width: 240px;
+        margin: 0;
+        margin-top: 76.5px;
+        transition: all ease-in-out 0.5s;
+    }
+
+    nav .navbar ul li {
+        padding: 40px 0 0 40px;
+    }
+
+    .navbar.active ul {
+        right: 0;
+    }
+    /* navbar end */
+
+    /* introduce */
+    .introduce .introduce-mockup img {
+        display: none;
+        visibility: hidden;
+    }
+
+    .introduce .introduce-head {
+        padding: 0;
+        margin: 0;
+        padding-left: 40px;
+    }
+
+    .introduce .introduce-head h1 {
+        font-size: 24px;
+        margin: 190px 10px 0 10px;
+        text-align: center;
+        padding: 0;
+        width: 270px;
+    }
+
+    .introduce .introduce-head p {
+        font-size: 17px;
+        text-align: center;
+        margin: 0 10px 0 10px;
+        width: 270px;
+    }
+
+    .introduce .introduce-head .h1-animate {
+        margin-top: 190px;
+        height: 5vh;
+        align-items: center;
+        animation: text 3s ease-out;
+        animation-delay: 5s;
+    }
+
+    .introduce .introduce-head .span-animate {
+        margin-top: 225px;
+        height: 5vh;
+        align-items: center;
+        animation: text 3s ease-in;
+        animation-delay: 5s;
+    }
+
+    @keyframes text {
+        0% {
+            width: 80%;
+        }
+        100% {
+            width: 0%;
+        }
+    }
+
+    .introduce .introduce-head button {
+        align-items: center;
+        text-align: center;
+        position: relative;
+        display: block;
+        margin: 0 auto;
+        margin-top: 25px;
+    }
+    /* introduce end */
+
+    /* about me*/
+    .about {
+        margin-top: 140px;
+    }
+
+    .about .about-head h1 {
+        font-size: 25px;
+    }
+
+    .about .about-cards {
+        margin: -20px 40px 0 40px;
+    }
+
+    .about .about-cards .about-card i {
+        font-size: 35px;
+        width: 65px;
+        height: 65px;
+    }
+
+    .about .about-cards .about-card {
+        width: 600%;
+    }
+
+    .about .about-cards .about-card p {
+        font-size: 11px;
+    }
+    /* about me end */
+
+    /* school */
+    .school h1 {
+        font-size: 25px;
+    }
+
+    .school .my-school {
+        display: block;
+        margin: 0;
+    }
+
+    .school .my-school img {
+        width: 190px;
+        height: 190px;
+        margin: auto;
+        align-items: center;
+        display: block;
+        margin-top: 15px;
+    }
+
+    .school .my-school .school-according {
+        display: block;
+        align-items: center;
+        margin-top: 50px;
+    }
+
+    .school .my-school .school-according .content {
+        max-width: 80%;
+    }
+
+    .school .my-school .school-according .content {
+        width: 300px;
+    }
+    
+    .school .my-school .school-according  .content .according-header h2 {
+        font-size: 15px;
+        line-height: 2rem;
+    }
+
+    .school .my-school .school-according  .content .according-body .body-content p {
+        font-size: 10px;
+    }
+
+    .school .my-school .school-according .content .according-header::after {
+        margin-left: 250px;
+        font-size: 20px;
+        margin-top: -40px;
+    }
+    /* school end */
+
+    /* footer */
+    .footer h2{
+        margin-top: -25px;
+        font-size: 17px;
+    }
+
+    .footer .footer-icon i {
+        font-size: 14px;
+    }
+
+    .footer p {
+        font-size: 12px;
+    }
+    /* footer end */
+
+}
